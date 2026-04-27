@@ -1,7 +1,7 @@
-const userModel = require("../models/user.model")
-const bcrypt = require("bcryptjs")
-const jwt = require("jsonwebtoken")
-const tokenBlacklistModel = require("../models/blacklist.model")
+import userModel from "../models/user.model.js"
+import bcrypt from "bcryptjs"
+import jwt from "jsonwebtoken"
+import tokenBlacklistModel from "../models/blacklist.model.js"
 
 /**
  * @name registerUserController
@@ -143,7 +143,7 @@ async function getMeController(req, res) {
 
 
 
-module.exports = {
+export default {
     registerUserController,
     loginUserController,
     logoutUserController,
